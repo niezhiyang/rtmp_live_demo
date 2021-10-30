@@ -1,0 +1,13 @@
+# ninja log v5
+0	7	0	clean	4e789138b592ea8
+0	498	1635565636	CMakeFiles/native-lib.dir/AudioChannel.cpp.o	8bd00128259db741
+1	499	1635565636	CMakeFiles/native-lib.dir/JavaCallHelper.cpp.o	3fc089f16bb7bdc8
+3	517	1635565636	CMakeFiles/native-lib.dir/VideoChannel.cpp.o	2b95aacbc557d417
+7	519	1635565636	librtmp/CMakeFiles/rtmp.dir/hashswf.c.o	32816a62a3e8cdf9
+8	520	1635565636	librtmp/CMakeFiles/rtmp.dir/log.c.o	dfe4f45af656933a
+9	521	1635565636	librtmp/CMakeFiles/rtmp.dir/parseurl.c.o	feb8880107f6049c
+6	561	1635565636	librtmp/CMakeFiles/rtmp.dir/amf.c.o	289dc67f1d67e16c
+11	765	1635565636	librtmp/CMakeFiles/rtmp.dir/rtmp.c.o	1896732099e6659d
+765	905	1635565636	librtmp/librtmp.a	6c247e53e1c96f07
+4	1177	1635565637	CMakeFiles/native-lib.dir/native-lib.cpp.o	d2f95ce25117c0de
+1178	1350	1635565637	/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	3e35d92beafe2944

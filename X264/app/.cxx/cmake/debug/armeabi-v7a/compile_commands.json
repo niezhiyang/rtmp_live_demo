@@ -1,0 +1,55 @@
+[
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/x264/armeabi-v7a/include -I/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/faac/armeabi-v7a/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -L/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/x264/armeabi-v7a/lib -L/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/faac/armeabi-v7a/lib -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/AudioChannel.cpp.o -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/AudioChannel.cpp",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/AudioChannel.cpp"
+},
+
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/x264/armeabi-v7a/include -I/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/faac/armeabi-v7a/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -L/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/x264/armeabi-v7a/lib -L/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/faac/armeabi-v7a/lib -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/JavaCallHelper.cpp.o -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/JavaCallHelper.cpp",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/JavaCallHelper.cpp"
+},
+
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/x264/armeabi-v7a/include -I/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/faac/armeabi-v7a/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -L/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/x264/armeabi-v7a/lib -L/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/faac/armeabi-v7a/lib -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/VideoChannel.cpp.o -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/VideoChannel.cpp",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/VideoChannel.cpp"
+},
+
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS -I/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/x264/armeabi-v7a/include -I/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/faac/armeabi-v7a/include  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -L/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/x264/armeabi-v7a/lib -L/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/faac/armeabi-v7a/lib -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/native-lib.cpp.o -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/native-lib.cpp",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/native-lib.cpp"
+},
+
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o librtmp/CMakeFiles/rtmp.dir/amf.c.o   -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/amf.c",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/amf.c"
+},
+
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o librtmp/CMakeFiles/rtmp.dir/hashswf.c.o   -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/hashswf.c",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/hashswf.c"
+},
+
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o librtmp/CMakeFiles/rtmp.dir/log.c.o   -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/log.c",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/log.c"
+},
+
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o librtmp/CMakeFiles/rtmp.dir/parseurl.c.o   -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/parseurl.c",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/parseurl.c"
+},
+
+{
+  "directory": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi23 --gcc-toolchain=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/momo/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot   -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -DNO_CRYPTO -O0 -fno-limit-debug-info  -fPIC   -o librtmp/CMakeFiles/rtmp.dir/rtmp.c.o   -c /Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/rtmp.c",
+  "file": "/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/src/main/cpp/librtmp/rtmp.c"
+}
+]

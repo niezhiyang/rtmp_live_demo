@@ -1,0 +1,7 @@
+Executable : /Users/momo/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+arguments : 
+-C
+/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a
+native-lib
+jvmArgs : 
+

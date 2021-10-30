@@ -1,0 +1,6 @@
+/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/native-lib.dir
+/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a/librtmp/CMakeFiles/rebuild_cache.dir
+/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a/librtmp/CMakeFiles/edit_cache.dir
+/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a/librtmp/CMakeFiles/rtmp.dir

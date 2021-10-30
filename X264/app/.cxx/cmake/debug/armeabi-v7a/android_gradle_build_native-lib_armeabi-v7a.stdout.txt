@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/momo/AndroidStudioProjects/NDK/rtmp_live_demo/X264/app/.cxx/cmake/debug/armeabi-v7a'
+ninja: no work to do.
