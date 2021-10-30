@@ -4,6 +4,7 @@ import android.graphics.SurfaceTexture;
 import android.media.MediaCodec;
 import android.os.Handler;
 import android.os.HandlerThread;
+import android.util.Log;
 import android.util.Size;
 import android.view.TextureView;
 import android.view.ViewGroup;
@@ -122,10 +123,13 @@ public class VideoChanel implements Preview.OnPreviewOutputUpdateListener, Image
                 Size size = new Size(image.getWidth(), image.getHeight());
                 int width = size.getHeight();
                 int heigth = image.getWidth();
+                Log.e(TAG,"width() : "+width +"-- heigth: "+heigth);
+
                 if (nv21 == null) {
                     nv21 = new byte[heigth * width * 3 / 2];
                     nv21_rotated = new byte[heigth * width * 3 / 2];
                 }
+
                 ImageUtil.yuvToNv21(y, u, v, nv21, heigth, width);
                 ImageUtil.nv21_rotate_to_90(nv21, nv21_rotated, heigth, width);
                 this.livePusher.native_pushVideo(nv21_rotated);
