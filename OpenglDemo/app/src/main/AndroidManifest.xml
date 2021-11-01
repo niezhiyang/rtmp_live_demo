@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nzy.opengldemo">
 
-   <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="true" />
@@ -14,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.OpenglDemo">
-        <activity android:name=".camerafilter.FilterActivity"
+        <activity android:name=".CameraMp4.FbiActivity"></activity>
+        <activity
+            android:name=".camerafilter.FilterActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,9 +25,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SimpleDemoActivity">
-
-        </activity>
+        <activity android:name=".SimpleDemoActivity"></activity>
     </application>
 
 </manifest>

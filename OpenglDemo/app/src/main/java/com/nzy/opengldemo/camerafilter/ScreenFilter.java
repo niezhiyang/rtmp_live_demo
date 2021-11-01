@@ -25,7 +25,9 @@ public class ScreenFilter {
     // 顶点着色器
     // 片源着色器
     // 整个屏幕的四个坐标，
+
     /**
+     * OpenGl 坐标
      * 世界坐标系
      */
     float[] VERTEX = {
@@ -36,6 +38,8 @@ public class ScreenFilter {
     };
     /**
      * 纹理坐标系
+     * 左上是0.0
+     * 向下是正
      */
     float[] TEXTURE = {
             0.0f, 0.0f,
