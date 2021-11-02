@@ -92,6 +92,7 @@ public class MediaRecorder {
         }
         //录制用的opengl已经和handler的线程绑定了 ，所以需要在这个线程中使用录制的opengl
         mHandler.post(new Runnable() {
+            @Override
             public void run() {
 //                opengl   能 1  不能2  draw  ---》surface
                 eglEnv.draw(textureId,timestamp);
