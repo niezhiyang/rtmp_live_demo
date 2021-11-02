@@ -77,8 +77,8 @@ public class ScreenFilter {
        // 灰色，取平均 rgb 取平均）
 //       String fragShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_frag_grey);
 //       String fragShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_frag_warmth);
-//       String fragShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_frag_cool);
-       String fragShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_frag_rotate);
+       String fragShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_frag_cool);
+//       String fragShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_frag_rotate);
 
        // mProgram 相当于GPU中的一个值，在 cpu中是没用的
        mProgram = OpenGLUtils.loadProgram(vertexShader, fragShader);
@@ -94,6 +94,10 @@ public class ScreenFilter {
        //变换矩阵， 需要将原本的vCoord（01,11,00,10） 与矩阵相乘
        vMatrix = GLES20.glGetUniformLocation(mProgram, "vMatrix");
 
+
+   }
+
+   public void setRaw(){
 
    }
     public void setSize(int width, int height) {

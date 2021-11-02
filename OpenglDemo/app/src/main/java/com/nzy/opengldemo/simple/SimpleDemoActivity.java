@@ -1,8 +1,9 @@
-package com.nzy.opengldemo;
+package com.nzy.opengldemo.simple;
 
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 
+import com.nzy.opengldemo.R;
 import com.nzy.opengldemo.simple.TriangleRender;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,7 +15,7 @@ public class SimpleDemoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_simple_opengl);
         glSurfaceView = findViewById(R.id.gLSurfaceView);
         // 使用 2 版本
         glSurfaceView.setEGLContextClientVersion(2);

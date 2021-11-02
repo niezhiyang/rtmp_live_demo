@@ -32,7 +32,7 @@ public class TriangleRender implements GLSurfaceView.Renderer {
                     "  gl_FragColor = vColor;" +
                     "}";
     static float triangleCoords[] = {
-            0.5f,  0.5f, 0.0f, // top
+            0f,  0.5f, 0.0f, // top
             -0.5f, -0.5f, 0.0f, // bottom left
             0.5f, -0.5f, 0.0f  // bottom right
     };

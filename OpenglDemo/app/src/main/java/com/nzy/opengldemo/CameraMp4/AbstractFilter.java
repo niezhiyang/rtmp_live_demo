@@ -3,7 +3,6 @@ package com.nzy.opengldemo.CameraMp4;
 import android.content.Context;
 import android.opengl.GLES20;
 
-import com.nzy.opengldemo.R;
 import com.nzy.opengldemo.camerafilter.OpenGLUtils;
 
 import java.nio.ByteBuffer;
@@ -17,7 +16,7 @@ import java.nio.FloatBuffer;
  * 顶点程序 确定形状
  * 片源程序 是着色的
  */
-public abstract class AbstractFilter {
+public  class AbstractFilter {
     private final int vCoord;
     private final int vTexture;
     public   int mProgram;
@@ -53,12 +52,17 @@ public abstract class AbstractFilter {
     FloatBuffer vertexBuffer;
     private int mWidth;
     private int mHeight;
-    private float[] mMtx;
     private int mFfagRawId;
+    private int vertexShaderId;
 
-    // 使用 bytebuffer 给 GPU
-   public AbstractFilter(Context context,int fragRawId){
-       mFfagRawId =fragRawId ;
+    /**
+     *
+     * @param context
+     * @param vertexShaderId 顶点坐标程序
+     * @param fragmentShaderId 片源着色程序
+     */
+   public AbstractFilter(Context context, int vertexShaderId, int fragmentShaderId){
+       mFfagRawId =fragmentShaderId ;
        // 申请连续的 4个字节 4(个左边)*4(每个坐标是float，4个字节)*2(代表有x和y)
        ByteBuffer buffer = ByteBuffer.allocateDirect(4 * 4 * 2);
        // 重新整理一下
@@ -75,7 +79,7 @@ public abstract class AbstractFilter {
        textureBuffer.put(TEXTURE);
 
        // 顶点着色器程序
-       String vertexShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_vert);
+       String vertexShader = OpenGLUtils.readRawTextFile(context,  vertexShaderId );
        // 灰色，取平均 rgb 取平均）
 //       String fragShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_frag_grey);
 //       String fragShader = OpenGLUtils.readRawTextFile(context, R.raw.camera_frag_warmth);
@@ -104,22 +108,20 @@ public abstract class AbstractFilter {
 
    }
 
-    public abstract void beforeDraw();
+    public  void beforeDraw(){};
 
     public void setSize(int width, int height) {
         mWidth = width;
         mHeight = height;
 
     }
-    public void setTransformMatrix(float[] mtx) {
-        mMtx = mtx;
-    }
+
 
     /**
      * 开始渲染
      * @param texture
      */
-    public void onDraw(int texture) {
+    public int onDraw(int texture) {
        // opengl 范围
         GLES20.glViewport(0,0,mWidth,mHeight);
         // 使用程序
@@ -155,8 +157,15 @@ public abstract class AbstractFilter {
 
         beforeDraw();
 
-        //通知画画，
+        //通知画画 渲染到屏幕了 如果是 FBO 的话，是直接给了FBO
         GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP,0,4);
+
+        return texture;
+
+    }
+
+
+    public void release() {
 
     }
 }
