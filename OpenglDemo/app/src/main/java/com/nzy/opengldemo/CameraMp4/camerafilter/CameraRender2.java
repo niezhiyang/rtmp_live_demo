@@ -6,9 +6,11 @@ import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
 import android.util.Log;
 
-import com.nzy.opengldemo.CameraMp4.CameraFilter;
 import com.nzy.opengldemo.CameraMp4.MediaRecorder;
 import com.nzy.opengldemo.CameraMp4.RecordFilter;
+import com.nzy.opengldemo.CameraMp4.filter.BeautyFilter;
+import com.nzy.opengldemo.CameraMp4.filter.CameraFilter;
+import com.nzy.opengldemo.CameraMp4.filter.SoulFilter;
 import com.nzy.opengldemo.R;
 
 import java.io.File;
@@ -36,6 +38,8 @@ class CameraRender2 implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUp
     float[] mtx = new float[16];
     private CameraFilter mCarmeraFilter;
     private RecordFilter mRecordFilter;
+    private SoulFilter mSoulFilter;
+    private BeautyFilter mBeautyFilter;
     private MediaRecorder mRecorder;
 
 
@@ -65,6 +69,9 @@ class CameraRender2 implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUp
                 EGL14.eglGetCurrentContext(),
                 480, 640);
 
+        mSoulFilter = new SoulFilter(mCameraView.getContext());
+        mBeautyFilter = new BeautyFilter(mCameraView.getContext());
+
     }
 
     @Override
@@ -72,6 +79,11 @@ class CameraRender2 implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUp
         GLES20.glViewport(0, 0, width, height);
         mRecordFilter.setSize(width, height);
         mCarmeraFilter.setSize(width, height);
+        mSoulFilter.setSize(width, height);
+        if(mBeautyFilter!=null){
+            mBeautyFilter.setSize(width, height);
+        }
+
     }
 
     @Override
@@ -94,7 +106,12 @@ class CameraRender2 implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUp
 
         // 此时 mCameraTexture SurfaceView是没有数据的，摄像头给了Fbo
         // 渲染到 再下一个图层
+        id = mSoulFilter.onDraw(id);
         id = mRecordFilter.onDraw(id);
+        if (mBeautyFilter != null) {
+//            行     打开 还是不打开 美颜滤镜    资源泄露
+            id = mBeautyFilter.onDraw(id);
+        }
         // 拿到了fbo的引用   可以  编码视频   输出  直播推理
         mRecorder.fireFrame(id,mCameraTexture.getTimestamp());
 
@@ -138,5 +155,22 @@ class CameraRender2 implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUp
     }
     public void stopRecord() {
         mRecorder.stop();
+    }
+
+    public void enableBeauty(final boolean isChecked) {
+
+        mCameraView.queueEvent(new Runnable() {
+            @Override
+            public void run() {
+                if (isChecked) {
+                    mBeautyFilter = new BeautyFilter(mCameraView.getContext());
+                    mBeautyFilter.setSize(mCameraView.getWidth(), mCameraView.getHeight());
+                }else {
+                    mBeautyFilter.release();
+                    mBeautyFilter = null;
+                }
+            }
+        });
+//        Opengl 线程  来做   fbo
     }
 }

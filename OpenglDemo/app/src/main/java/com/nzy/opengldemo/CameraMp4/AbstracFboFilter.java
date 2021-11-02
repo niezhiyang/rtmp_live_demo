@@ -3,6 +3,8 @@ package com.nzy.opengldemo.CameraMp4;
 import android.content.Context;
 import android.opengl.GLES20;
 
+import com.nzy.opengldemo.CameraMp4.filter.AbstractFilter;
+
 /**
  * @author niezhiyang
  * since 11/1/21

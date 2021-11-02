@@ -15,7 +15,7 @@ import androidx.lifecycle.LifecycleOwner;
 public class CameraHelper2 {
 
     private HandlerThread handlerThread;
-    private CameraX.LensFacing currentFacing = CameraX.LensFacing.BACK;
+    private CameraX.LensFacing currentFacing = CameraX.LensFacing.FRONT;
     private Preview.OnPreviewOutputUpdateListener listener;
 
 
