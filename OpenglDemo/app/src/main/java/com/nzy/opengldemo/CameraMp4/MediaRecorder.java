@@ -17,15 +17,15 @@ public class MediaRecorder {
     private MediaCodec mMediaCodec;
     private   int mWidth;
     private   int mHeight;
-    private String mPath;
+    private   String mPath;
     private Surface mSurface;
     private Handler mHandler;
-//    编码封装格式  h264
+    //    编码封装格式  h264
     private MediaMuxer mMuxer;
     private EGLContext mGlContext;
     private EGLEnv eglEnv;
     private boolean isStart;
-    private Context mContext;
+    private   Context mContext;
 
     private long mLastTimeStamp;
     private int track;
@@ -56,20 +56,20 @@ public class MediaRecorder {
         mMediaCodec = MediaCodec.createEncoderByType(MediaFormat.MIMETYPE_VIDEO_AVC);
         //配置编码器
         mMediaCodec.configure(format, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE);
-        //输入数据     byte[]    gpu  mediaprojection
+//输入数据     byte[]    gpu  mediaprojection
 
         mSurface= mMediaCodec.createInputSurface();
 
-        //        视频  编码一个可以播放的视频
+//        视频  编码一个可以播放的视频
         //混合器 (复用器) 将编码的h.264封装为mp4
         mMuxer = new MediaMuxer(mPath,
                 MediaMuxer.OutputFormat.MUXER_OUTPUT_MPEG_4);
 
         //开启编码
         mMediaCodec.start();
-       //        重点    opengl   gpu里面的数据画面   肯定要调用   opengl 函数
-        //线程
-        //OpenGL 的 環境
+//        重点    opengl   gpu里面的数据画面   肯定要调用   opengl 函数
+//线程
+        //創建OpenGL 的 環境
         HandlerThread handlerThread = new HandlerThread("codec-gl");
         handlerThread.start();
         mHandler = new Handler(handlerThread.getLooper());
@@ -83,7 +83,7 @@ public class MediaRecorder {
         });
 
     }
-//    编码   textureId数据  并且编码
+    //    编码   textureId数据  并且编码
 //byte[]
     public void fireFrame(final int textureId, final long timestamp) {
 //        主动拉去openglfbo数据
@@ -92,9 +92,8 @@ public class MediaRecorder {
         }
         //录制用的opengl已经和handler的线程绑定了 ，所以需要在这个线程中使用录制的opengl
         mHandler.post(new Runnable() {
-            @Override
             public void run() {
-//                opengl   就会渲染到 surface
+//                opengl   能 1  不能2  draw  ---》surface
                 eglEnv.draw(textureId,timestamp);
 //                获取对应的数据
                 codec(false);
@@ -106,6 +105,10 @@ public class MediaRecorder {
     private void codec(boolean endOfStream) {
 //        数据什么时候
 //        编码
+        //给个结束信号
+        if (endOfStream) {
+            mMediaCodec.signalEndOfInputStream();
+        }
         while (true) {
 
             MediaCodec.BufferInfo bufferInfo = new MediaCodec.BufferInfo();
@@ -156,12 +159,7 @@ public class MediaRecorder {
             }
 
         }
-
-
     }
-
-
-
     public void stop() {
         // 释放
         isStart = false;
