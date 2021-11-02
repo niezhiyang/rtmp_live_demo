@@ -19,7 +19,7 @@ public class BeautyFilter extends AbstracFboFilter {
      * @param context
      */
     public BeautyFilter(Context context) {
-        super(context, R.raw.beauty_frag,R.raw.beauty_fragment2);
+        super(context, R.raw.base_vert,R.raw.beauty_fragment2);
         // 拿到片源程序中拿到变量引用
         width = GLES20.glGetUniformLocation(mProgram, "width");
         height = GLES20.glGetUniformLocation(mProgram, "height");

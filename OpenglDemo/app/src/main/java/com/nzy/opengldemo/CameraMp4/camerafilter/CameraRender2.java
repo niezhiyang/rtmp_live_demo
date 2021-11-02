@@ -106,12 +106,10 @@ class CameraRender2 implements GLSurfaceView.Renderer, Preview.OnPreviewOutputUp
 
         // 此时 mCameraTexture SurfaceView是没有数据的，摄像头给了Fbo
         // 渲染到 再下一个图层
-        id = mSoulFilter.onDraw(id);
+//        id = mSoulFilter.onDraw(id);
         id = mRecordFilter.onDraw(id);
-        if (mBeautyFilter != null) {
 //            行     打开 还是不打开 美颜滤镜    资源泄露
             id = mBeautyFilter.onDraw(id);
-        }
         // 拿到了fbo的引用   可以  编码视频   输出  直播推理
         mRecorder.fireFrame(id,mCameraTexture.getTimestamp());
 
