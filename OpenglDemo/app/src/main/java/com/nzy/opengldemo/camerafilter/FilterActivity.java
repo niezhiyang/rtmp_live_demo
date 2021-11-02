@@ -3,6 +3,7 @@ package com.nzy.opengldemo.camerafilter;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.view.View;
 
 import com.nzy.opengldemo.R;
 
@@ -43,5 +44,8 @@ public class FilterActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         gLSurfaceView.onPause();
+    }
+
+    public void grey(View view) {
     }
 }
