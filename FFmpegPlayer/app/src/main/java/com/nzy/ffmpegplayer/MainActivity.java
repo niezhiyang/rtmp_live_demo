@@ -87,7 +87,8 @@ public class MainActivity extends AppCompatActivity {
     public void playMp3(View view) {
 //        String path = new File(getFilesDir(), "Dance.mp3").getAbsolutePath();
         // 可以解码所有的，无论音视频
-        String path = new File(getFilesDir(), "hashiqi.mp4").getAbsolutePath();
+//        String path = new File(getFilesDir(), "hashiqi.mp4").getAbsolutePath();
+        String path = "http://mpge.5nd.com/2015/2015-11-26/69708/1.mp3";
         playSound(path);
     }
 

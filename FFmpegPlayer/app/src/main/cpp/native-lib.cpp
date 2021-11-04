@@ -217,6 +217,10 @@ Java_com_nzy_ffmpegplayer_MainActivity_playSound(JNIEnv *env, jobject thiz, jstr
 
     // 注册所有的组件，已经过时了，源码说没有必要注册了，已经测过了 可以不写
     avcodec_register_all();
+    // 初始化网络模块，网络也可以播放
+    avformat_network_init();
+
+
     // 实例化上下文
     AVFormatContext *avFormatContext = avformat_alloc_context();
     // 打开一个文件 或者是 视频流
