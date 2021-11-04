@@ -189,7 +189,7 @@ Java_com_nzy_opencv_MainActivity_postData(JNIEnv *env, jobject thiz, jbyteArray 
     // 把数据画到 SurfaceView
     //  Mat 和 Bitmap 是可以互转的
     // window 里面有个buffer
-    LOGE("setSurface %d",window);
+
     if (window) {
         do {
             if (!window) {
@@ -237,11 +237,13 @@ Java_com_nzy_opencv_MainActivity_setSurface(JNIEnv *env, jobject thiz, jobject s
     // 渲染Surface的时候 直接找window ,#include "android/native_window.h",
     // 在 CmakerList中加入 android 的链接 即使 ndk系统目录下的android.so
     // 可以理解为 Surface中有一个window，找到这个Window
-
+    LOGE("setSurface %d",window);
     if (window) {
         ANativeWindow_release(window);
         window = 0;
     }
+
     window = ANativeWindow_fromSurface(env, surface);
+    LOGE("setSurface %d",window);
 
 }
