@@ -2,12 +2,16 @@ package com.nzy.ffmpegplayer;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.media.AudioFormat;
+import android.media.AudioManager;
+import android.media.AudioTrack;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Surface;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,6 +24,7 @@ import java.io.File;
  * // 音视频同步，一般按照音频为准，因为音频不容易操作
  */
 public class MainActivity extends AppCompatActivity {
+    private AudioTrack audioTrack;
     private Surface surface;
 
     static {
@@ -57,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void copyMp4() {
         Utils.copyAssets(this, "hashiqi.mp4");
+        Utils.copyAssets(this, "Dance.mp3");
     }
 
     public boolean checkPermission() {
@@ -72,12 +78,53 @@ public class MainActivity extends AppCompatActivity {
         return false;
     }
 
-    public void play(View view) {
+    public void playVideo(View view) {
         String path = new File(getFilesDir(), "hashiqi.mp4").getAbsolutePath();
         play(path, surface);
+
+    }
+
+    public void playMp3(View view) {
+//        String path = new File(getFilesDir(), "Dance.mp3").getAbsolutePath();
+        // 可以解码所有的，无论音视频
+        String path = new File(getFilesDir(), "hashiqi.mp4").getAbsolutePath();
+        playSound(path);
+    }
+
+    /**
+     * 由 Native 来调用的，来初始化音频 AudioTrack
+     */
+
+    public void createTrack(int sampleRateInHz, int channals) {
+        Toast.makeText(this, "初始化播放器", Toast.LENGTH_SHORT).show();
+        int channaleConfig;//通道数
+
+        if (channals == 1) {
+            channaleConfig = AudioFormat.CHANNEL_OUT_MONO;
+        } else if (channals == 2) {
+            channaleConfig = AudioFormat.CHANNEL_OUT_STEREO;
+        } else {
+            channaleConfig = AudioFormat.CHANNEL_OUT_MONO;
+        }
+        int buffersize = AudioTrack.getMinBufferSize(sampleRateInHz,
+                channaleConfig, AudioFormat.ENCODING_PCM_16BIT);
+        audioTrack = new AudioTrack(AudioManager.STREAM_MUSIC, sampleRateInHz, channaleConfig, AudioFormat.ENCODING_PCM_16BIT
+                , buffersize, AudioTrack.MODE_STREAM);
+        audioTrack.play();
+
+    }
+
+    /**
+     * 由 Native 来调用的，播放pcm数据
+     */
+    public void playTrack(byte[] buffer,int lenth){
+        if (audioTrack != null && audioTrack.getPlayState() == AudioTrack.PLAYSTATE_PLAYING) {
+            audioTrack.write(buffer, 0, lenth);
+        }
     }
 
     private native int play(String path, Surface surface);
 
 
+    private native int playSound(String path);
 }
